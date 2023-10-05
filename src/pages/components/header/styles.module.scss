@@ -1,0 +1,41 @@
+.container{
+    background-color: var(--Blue);
+    width: 100%;
+    height: 6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem;
+    gap: 2.4rem;
+    border-bottom: solid 1px var(--Blue2);
+    .iconVila{
+        width: 4rem;
+        object-fit: cover;
+    }
+    .labelSearch{
+        background-color: var(--White);
+        height: 3.4rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem;
+        border-radius: 4px;
+        .inputSearch{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .buttonsHeader{
+        display: flex;
+        flex-direction: row;
+        gap: 0.8rem;
+        svg{
+            color: var(--White2);
+            transition: color .5s ease;
+            &:hover{
+                color: var(--White);
+            }
+        }
+    }
+}
