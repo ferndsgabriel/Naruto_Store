@@ -135,6 +135,7 @@
             border-radius: 5px;
             gap: 1.6rem;
             justify-content: space-between;
+            overflow: hidden;
             .addCar{
                 align-self: flex-end;
                 svg{
@@ -159,7 +160,7 @@
                     letter-spacing: 0.1rem;
                 }
                 img{
-                    width: 40%;
+                    width: 8rem;
                 }
             }
             .highlightLabel{
@@ -230,6 +231,10 @@
     }
     .viewAll{
         align-self: flex-start;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: var(--Orange);
         &:hover{
             transform: scale(1.1);
         }
