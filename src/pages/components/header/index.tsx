@@ -1,6 +1,8 @@
-import {AiOutlineSearch,AiOutlineShoppingCart,AiOutlineMenu} from "react-icons/ai";
+import {AiOutlineSearch, AiOutlineShoppingCart , AiOutlineMenu} from "react-icons/ai";
+
+
 import styles from "./styles.module.scss";
-export function Header(){
+export default function Header(){
     return(
         <header className={styles.container}>
             <img src="vila.svg" alt="folha icone"

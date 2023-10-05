@@ -1,11 +1,11 @@
-import { Header } from "./components/header";
+import Header from "./components/header";
 import { Promotions, Highlights } from "@/fakebank";
 import styles from "../styles/home.module.scss";
 import {AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import {GiSharpShuriken} from "react-icons/gi";
 import {BsFillCartPlusFill} from "react-icons/bs";
 import {FaMoneyCheckAlt} from "react-icons/fa";
-import {useState, useEffect, useRef} from "react";
+import react,{useState, useEffect, useRef} from "react";
 
 
 export default function Home(){
