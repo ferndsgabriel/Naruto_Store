@@ -187,6 +187,7 @@
                 button{
                     width: 100%;
                     transition: all .5s ease;
+                    font-weight: bold;
                     &:hover{
                         background-color: var(--Blue);
                         color: var(--White);
@@ -240,3 +241,259 @@
         }
     }
 }
+
+.sectionAllItens{
+    background-color: var(--White2);
+    width: 100%;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-bottom: 10rem;
+    .filterArea{
+        background-color: var(--White);
+        width: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 0.8rem;
+        .selectOrder{
+            width: 100%;
+            option{
+                padding: 1.6rem;
+                border-radius: 5px;
+                width: 40rem;
+                background-color: var(--Orange);
+                color: var(--White);
+            }
+        }
+        svg{
+            color: var(--Orange);
+        }    
+    }
+
+    .allCards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.2rem;
+        .card{
+            background-color: var(--White);
+            
+            display: flex;
+            flex-direction: column;
+            padding: 0.8rem;
+            border-radius: 5px;
+            gap: 1.6rem;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        .addCar{
+            align-self: flex-end;
+            svg{
+                transition: color .5s ease;
+                color: var(--Gray);
+                &:hover{
+                    color: var(--Blue);
+                }
+            }
+        }
+        .aboutAndPrice{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            text-align: end;
+            width: 100%;
+            
+            p{
+                font-weight: bold;
+                color: var(--Orange);
+                letter-spacing: 0.1rem;
+            }
+            img{
+                width: 8rem;
+            }
+        }
+        .buy{
+            background-color: var(--Orange);
+            height: 3.4rem;
+            border-radius: 5px;
+            color: var(--White);
+            font-weight: bold;
+            transition: background-color .5s ease;
+            &:hover{
+                background-color: var(--Blue);
+            }
+        }
+    }
+    
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .signup{
+        background-color: var(--Blue);
+        width: 100%;
+        padding: 1.6rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.6rem;
+        .logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 2.4rem;
+            h3{
+                color: var(--White);
+            }
+            svg{
+                animation: shuriken 1s infinite;
+                color: var(--White);
+            }
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.2rem;
+            input{
+                width: 100%;
+                background-color: var(--White);
+                display: flex;
+                align-items: center;
+                height: 4rem;
+                border-radius: 5px;
+                padding: 0.8rem;
+            }
+            button{
+                width: 100%;
+                background-color: var(--Orange);
+                height: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                color: var(--White);
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 0.1rem;
+                transition: background-color .5s ease;
+                &:hover{
+                    background-color: var(--Orange2);
+                }
+            }
+        }
+    }
+    .vilas{
+        padding: 1.6rem;
+        background-color: var(--Blue2);
+        width: 100%;
+        padding-bottom: 3.4rem;
+        .cardVila{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+            display: flex;
+            justify-content: space-between;
+            height: 4rem;
+            align-items: center;
+            p{
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: var(--White);
+            }
+            svg{
+                color: var(--White);
+                transition: transform .5s ease;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .sociais{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1.2rem;
+            gap: 1.6rem;
+            p{
+                font-size: 1.2rem;
+                color: var(--White);
+                font-weight: bold;
+            }
+            .buttons{
+                display: flex;
+                gap: 1.6rem;
+                button{
+                    background-color: var(--White);
+                    padding: 0.8rem;
+                    width: 3.4rem;
+                    height: 3.4rem;
+                    border-radius: 100%;
+                    transition: background-color .5s ease;
+                    svg{
+                        color: var(--Blue)
+                    }
+                    &:hover{
+                        background-color: var(--White2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-Width:500px){
+.highlight{
+    .viewAllStyle{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }   
+    .sectionAllItens{
+        .allCards{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (min-Width:768px){
+    .highlight{
+        .viewAllStyle{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }   
+        .sectionAllItens{
+            .allCards{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+
+    @media (min-Width:992px){
+        .highlight{
+            .viewAllStyle{
+                    grid-template-columns: repeat(4,1fr);
+                }
+            }   
+            .sectionAllItens{
+                .allCards{
+                    grid-template-columns: repeat(4,1fr);
+                }
+            }
+            .footer{
+                .signup{
+                    .form{
+                        flex-direction: row;
+                    }
+                    
+                }
+                
+            }
+        }
+        
+    
