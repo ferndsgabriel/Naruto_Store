@@ -2,6 +2,14 @@ import {AiOutlineSearch, AiOutlineShoppingCart , AiOutlineMenu} from "react-icon
 
 
 import styles from "./styles.module.scss";
+function getAudio (value:string){
+        try{
+        const audio = new Audio(`${value}.wav`);
+        audio.play();
+        }catch(err){
+        console.log('Erro ao reproduzir audio')
+        }
+    }
 export default function Header(){
     return(
         <header className={styles.container}>
@@ -13,7 +21,7 @@ export default function Header(){
                 <p><AiOutlineSearch/></p>
             </label>
             <div className={styles.buttonsHeader}>
-                <button><AiOutlineShoppingCart/></button>
+                <button  onClick={()=>getAudio('01')}><AiOutlineShoppingCart/></button>
                 <button><AiOutlineMenu/></button>
             </div>
         </header>

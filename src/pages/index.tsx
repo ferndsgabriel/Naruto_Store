@@ -43,8 +43,6 @@ export default function Home(){
     const nextIndex = (promotionIndex + 1) % promotions.length;
     setPromotionIndex(nextIndex);
   };
-
-  
   useEffect(() => {
     const intervalId = setInterval(automationNextPromotion, 5000);
 
@@ -74,9 +72,17 @@ export default function Home(){
     }
   }
   
+  function getAudio (value:string){
+    try{
+      const audio = new Audio(`${value}.wav`);
+      audio.play();
+    }catch(err){
+      console.log('Erro ao reproduzir audio')
+    }
+    
+  }
 
 
-  
 
 
 
@@ -118,7 +124,7 @@ export default function Home(){
               <h3>{promotions[promotionIndex].name}</h3>
               <h3>R$ {promotions[promotionIndex].price.toFixed(2)}</h3>
             </div>
-            <button className={styles.buy}>
+            <button className={styles.buy}onClick={()=>getAudio('02')}>
               Comprar
             </button>
           <button className={styles.nextProduct} onClick={()=>nextProdut(+1)}>
@@ -145,7 +151,7 @@ export default function Home(){
           {highlight.map((item,index)=>{
             return(
               <div key={item.id} className={styles.card}>
-                <button className={styles.addCar}>
+                <button className={styles.addCar}onClick={()=>getAudio('04')}>
                   <BsFillCartPlusFill/>
                 </button>
                   <div className={styles.aboutAndPrice}>
@@ -160,7 +166,7 @@ export default function Home(){
                       <div className={styles.svg}>
                         <FaMoneyCheckAlt/>
                       </div>
-                      <button>Comprar</button>
+                      <button onClick={()=>getAudio('03')}>Comprar</button>
                   </label>
               </div>
             )
@@ -207,7 +213,7 @@ export default function Home(){
             {itensFilter.map((item,index)=>{
               return(
                 <div key={item.id} className={styles.card}>
-                  <button className={styles.addCar}>
+                  <button className={styles.addCar}onClick={()=>getAudio('04')}>
                       <BsFillCartPlusFill/>
                     </button>
                       <div className={styles.aboutAndPrice}>
@@ -217,7 +223,7 @@ export default function Home(){
                           <p>R$ {item.price.toFixed(2)}</p>
                         </div>
                       </div>
-                      <button className={styles.buy}>Comprar</button>
+                      <button className={styles.buy}onClick={(e)=>getAudio('05')}>Comprar</button>
                 </div>
               )
             })}
@@ -230,67 +236,68 @@ export default function Home(){
                 <h3>Naruto Store</h3>
                 <GiSharpShuriken/>
               </div>   
-              <form className={styles.form}>
+              <div className={styles.form}onSubmit={()=>getAudio('06')}>
                 <input type="text" placeholder="Qual é o seu nome?"/>
                 <input type="text" placeholder="Seu e-mail?"/>
-                <button>Cadastrar</button>
-              </form>
+                <button onClick={()=>getAudio('06')}>Cadastrar</button>
+              </div>
             </div>
 
             <div className={styles.vilas}>
               <div className={styles.cardVila}>
                 <p>Vila Oculta da Folha</p>
-                <button>
+                <button onClick={()=>getAudio('07')}>
                   <AiOutlineArrowRight/>
                 </button>
               </div>
 
               <div className={styles.cardVila}>
                 <p>Vila Oculta da Névoa</p>
-                <button>
+                <button onClick={()=>getAudio('07')}>
                   <AiOutlineArrowRight/>
                 </button>
               </div>
 
               <div className={styles.cardVila}>
                 <p>Vila Oculta da Pedra</p>
-                <button>
+                <button onClick={()=>getAudio('07')}>
                   <AiOutlineArrowRight/>
                 </button>
               </div>
 
               <div className={styles.cardVila}>
                 <p>Vila Oculta da Nuvem</p>
-                <button>
+                <button onClick={()=>getAudio('07')}>
                   <AiOutlineArrowRight/>
                 </button>
               </div>
 
               <div className={styles.cardVila}>
                 <p>Vila Oculta da Areia</p>
-                <button>
+                <button onClick={()=>getAudio('07')}>
                   <AiOutlineArrowRight/>
                 </button>
               </div>
+              
               <div className={styles.sociais}>
                 <p>Mídias sociais</p>
                 <div className={styles.buttons}>
-                  <button>
+                  <button onClick={()=>getAudio('08')}>
                     <BiLogoFacebook/>
                   </button>
-                  <button>
+                  <button onClick={()=>getAudio('08')}>
                     <BiLogoInstagram/>
                   </button>
-                  <button>
+                  <button onClick={()=>getAudio('08')}>
                     <FaXTwitter/>
                   </button>
-                  <button>
+                  <button onClick={()=>getAudio('08')}>
                     <BiLogoYoutube/>
                   </button>
-                  <button>
+                  <button onClick={()=>getAudio('08')}>
                     <BiLogoLinkedin/>
                   </button>
-                  <button>
+                  <button onClick={()=>getAudio('08')}>
                     <BiLogoTiktok/>
                   </button>
                 </div>
