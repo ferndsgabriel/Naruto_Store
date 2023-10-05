@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import Header from "@/components/header";
 import { Promotions, Highlights, AllItens } from "@/fakebank";
 import styles from "../styles/home.module.scss";
 import {AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineFilter } from "react-icons/ai";
@@ -116,17 +116,21 @@ export default function Home(){
     <>
       <Header/>
       <section className={styles.promotion}>
+        <div className={styles.areaWhite}>
+          <p>Em promoção - {promotions.length}</p>
+          <button className={styles.buy}onClick={()=>getAudio('02')}>
+              Comprar
+          </button>
+        </div>
         <div className={styles.conteudo} style={estiloDoProduto}>  
           <button className={styles.nextProduct} onClick={()=>nextProdut(-1)}>
               <AiOutlineArrowLeft/>
           </button>
             <div className={styles.info}>
-              <h3>{promotions[promotionIndex].name}</h3>
-              <h3>R$ {promotions[promotionIndex].price.toFixed(2)}</h3>
+              <h1>{promotions[promotionIndex].name}</h1>
+              <h1>R$ {promotions[promotionIndex].price.toFixed(2)}</h1>
             </div>
-            <button className={styles.buy}onClick={()=>getAudio('02')}>
-              Comprar
-            </button>
+
           <button className={styles.nextProduct} onClick={()=>nextProdut(+1)}>
               <AiOutlineArrowRight/>
             </button>
