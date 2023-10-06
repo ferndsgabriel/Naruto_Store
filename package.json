@@ -13,12 +13,14 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
+    "react-modal": "^3.16.1",
     "sass": "^1.68.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-modal": "^3.16.1",
     "typescript": "^5"
   },
   "main": "index.js",

@@ -10,8 +10,6 @@ import react,{useState, useEffect, useRef} from "react";
 import {BiLogoFacebook,BiLogoInstagram,BiLogoYoutube, BiLogoLinkedin,BiLogoTiktok} from "react-icons/bi";
 
 
-
-
 export default function Home(){
   const promotions = Promotions;
   const highlight = Highlights;
@@ -82,10 +80,6 @@ export default function Home(){
     
   }
 
-
-
-
-
   function filterBy(filter:string) {
     switch(filter){
       case 'menorP':
@@ -111,7 +105,6 @@ export default function Home(){
     }
   }
   
-
   return(
     <>
       <Header/>
